@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+        }
+        main {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 900px; /* Ancho aumentado para que quepan las imágenes */
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content {
+            max-width: 600px; /* Limité el ancho del contenido */
+            margin: 0 20px; /* Margen para separarlo de las imágenes */
+        }
+        .images {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px; /* Espacio entre el contenido y las imágenes */
+        }
+        .image {
+            flex: 1;
+            margin: 0 10px;
+        }
+        .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function toggleText() {
+            var extraText = document.getElementById("extra-text");
+            if (extraText.style.display === "none" || extraText.style.display === "") {
+                extraText.style.display = "block";
+            } else {
+                extraText.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Problema ético</h1>
+    </header>
+    <main>
+        <div class="content">
+            <article>
+                <h2>El Problema Ético:</h2>
+                <p>La ética es lo que nos ayuda a decidir entre lo que está bien y lo que está mal en nuestra vida diaria. Sin embargo, tomar decisiones morales no siempre es fácil, porque lo correcto para una persona puede no serlo para otra. Ahí es donde aparece el problema ético: ¿cómo saber cuál es la mejor decisión?</p>
+                
+                <p id="extra-text" class="hidden">
+                    <strong>1. El Problema Ético:</strong><br>
+                    No siempre hay respuestas claras, y muchas veces lo que elegimos depende de nuestros valores y creencias.<br><br>
+
+                    <strong>2. El Ámbito de la Ética:</strong><br>
+                    La ética no solo influye en nuestras decisiones personales, sino también en la sociedad.<br><br>
+
+                    <strong>3. Relativismo y Subjetivismo Ético:</strong><br>
+                    Aquí entramos en el debate sobre si existen reglas morales universales o si todo depende del contexto.<br><br>
+
+                    <strong>Relativismo ético:</strong> Lo que es correcto en una cultura puede no serlo en otra. Por ejemplo, en algunos países es normal que los hijos vivan con sus padres hasta que se casen, mientras que en otros se espera que se independicen jóvenes. No hay una única forma de ver lo correcto.<br><br>
+
+                    En resumen, la ética es una guía para vivir mejor, pero no siempre es fácil encontrar respuestas claras. Depende de nuestras creencias, de la sociedad en la que vivimos y de los valores que consideramos importantes.
+                </p>
+                
+                <a onclick="toggleText()">Leer más</a>
+            </article>
+        </div>
+    </main>
+    <div class="images">
+        <div class="image">
+            <img src="images1.jpg" alt="Imagen 1">
+        </div>
+        <div class="image">
+            <img src="images2.jpg" alt="Imagen 2">
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Mi Blog. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
